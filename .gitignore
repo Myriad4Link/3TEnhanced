@@ -1,0 +1,70 @@
+﻿# 忽略Rider的配置、日志等文件
+/.idea/
+/.idea_modules/
+*.iml
+
+# 忽略构建生成的文件
+/out/
+
+# 忽略Mac系统生成的文件
+.DS_Store
+
+# 忽略日志文件
+*.log
+
+# 忽略临时文件
+*.bak
+*.swp
+
+# 忽略二进制文件
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# 忽略OS生成的文件
+Thumbs.db
+ehthumbs.db
+
+# 忽略项目导出的文件
+export/
+
+# 忽略Unity项目的临时文件
+[Oo]bj/
+[Bb]uild/
+Assets/AssetStoreTools*
+
+# 忽略Visual Studio Code配置
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# 自定义其他要忽略的文件类型
+*.exe
+*.dll
+*.pdb
+*.suo
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.sdf
+*.opensdf
+*.res
+*.pidb
+ipch/
+*.x86
+*.x64
+*.ilk
+*.meta
+*.unityproj
+*.booproj
