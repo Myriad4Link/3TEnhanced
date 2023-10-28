@@ -20,5 +20,8 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [D:/Myriad's Projects/TTTEnhanced/TTTEnhanced/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[D:/Myriad's Projects/TTTEnhanced/TTTEnhanced/Views/GamePanelControl.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/Myriad's Projects/TTTEnhanced/TTTEnhanced/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

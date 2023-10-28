@@ -2,5 +2,9 @@
 
 public class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting => "Welcome to Avalonia!";
+    public GamePanelControlViewModel GamePanelControlViewModel { get; set; }
+    public MainWindowViewModel()
+    {
+        GamePanelControlViewModel = new GamePanelControlViewModel(); 
+    }
 }

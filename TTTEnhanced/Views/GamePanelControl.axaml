@@ -1,0 +1,26 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:TTTEnhanced.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="530" d:DesignHeight="590"
+             Width="530" Height="600"
+             x:Class="TTTEnhanced.Views.GamePanelControl"
+             x:DataType="vm:GamePanelControlViewModel">
+    <Panel>
+    <Grid ShowGridLines="True" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <UniformGrid VerticalAlignment="Center" HorizontalAlignment="Center" Rows="3" Columns="3">
+                <Button Name="Button1" Width="120" Height="120" BorderBrush="{Binding Borders[0][0]}" Command="{Binding OnCellClick}"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120"/>
+            </UniformGrid>
+        </Grid>
+        <Label HorizontalAlignment="Center" Margin="10" Content="{Binding Text}"></Label>
+    </Panel>
+</UserControl>
