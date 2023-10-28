@@ -3,22 +3,91 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:TTTEnhanced.ViewModels"
+             xmlns:local="clr-namespace:TTTEnhanced.ViewModels.Converter"
              mc:Ignorable="d" d:DesignWidth="530" d:DesignHeight="590"
              Width="530" Height="600"
              x:Class="TTTEnhanced.Views.GamePanelControl"
              x:DataType="vm:GamePanelControlViewModel">
+    <UserControl.Resources>
+        <local:OValueConverter x:Key="OValueConverter"/>
+        <local:XValueConverter x:Key="XValueConverter"/>
+    </UserControl.Resources>
+    
     <Panel>
     <Grid ShowGridLines="True" VerticalAlignment="Center" HorizontalAlignment="Center">
             <UniformGrid VerticalAlignment="Center" HorizontalAlignment="Center" Rows="3" Columns="3">
-                <Button Name="Button1" Width="120" Height="120" BorderBrush="{Binding Borders[0][0]}" Command="{Binding OnCellClick}"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
-                <Button Width="120" Height="120"/>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="0">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[0][0], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[0][0], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="1">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[0][1], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[0][1], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="2">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[0][2], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[0][2], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="3">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[1][0], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[1][0], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="4">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[1][1], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[1][1], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="5">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[1][2], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[1][2], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="6">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[2][0], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[2][0], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="7">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[2][1], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[2][1], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
+                <Button Width="120" Height="120" Command="{Binding OnCellClick}" CommandParameter="8">
+                    <Panel>
+                        <Image Source="/Assets/X.png" IsVisible="{Binding ChessBoard[2][2], Converter={StaticResource XValueConverter}}" Width="140"
+                               Height="140" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Image Source="/Assets/O.png" IsVisible="{Binding ChessBoard[2][2], Converter={StaticResource OValueConverter}}" Width="100"
+                               Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Panel>
+                </Button>
             </UniformGrid>
         </Grid>
         <Label HorizontalAlignment="Center" Margin="10" Content="{Binding Text}"></Label>

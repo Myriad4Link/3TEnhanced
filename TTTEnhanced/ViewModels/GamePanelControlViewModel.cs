@@ -1,47 +1,47 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Reactive.Linq;
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
-using Avalonia.Interactivity;
-using Avalonia.Layout;
+﻿using System.Collections.ObjectModel;
 using ReactiveUI;
 
-namespace TTTEnhanced.ViewModels
+namespace TTTEnhanced.ViewModels;
+
+public class GamePanelControlViewModel : ViewModelBase
 {
-
-    public class GamePanelControlViewModel : ViewModelBase
+    public string Text
     {
-        public string Text
+        get => _text;
+        set => this.RaiseAndSetIfChanged(ref _text, value);
+    }
+
+    private string _text;
+
+    public ObservableCollection<ObservableCollection<char?>> ChessBoard
+    {
+        get => _chessBoard;
+        set => this.RaiseAndSetIfChanged(ref _chessBoard, value);
+    }
+
+    private ObservableCollection<ObservableCollection<char?>> _chessBoard;
+
+    private int _turnCount;
+    public GamePanelControlViewModel()
+    {
+        _text = "Welcome to Tic-Tac-Toe!";
+        
+        _chessBoard = new ObservableCollection<ObservableCollection<char?>>
         {
-            get => _text;
-            set => this.RaiseAndSetIfChanged(ref _text, value);
-        }
+            new ObservableCollection<char?>() {null, null, null},
+            new ObservableCollection<char?>() {null, null, null},
+            new ObservableCollection<char?>() {null, null, null}
+        };
+        
+        _turnCount = 0;
+    }
 
-        private string _text = "Welcome to Tic-Tac-Toe!";
+    public void OnCellClick(int index)
+    {
+        _turnCount++;
+        ChessBoard[index / 3][index % 3] = 
+            _turnCount % 2 == 0 ? 'O' : 'X';
 
-        public ObservableCollection<ObservableCollection<Border>> Borders
-        {
-            get => _borders;
-            set => this.RaiseAndSetIfChanged(ref _borders, value);
-        }
-
-        private ObservableCollection<ObservableCollection<Border>> _borders;
-
-        public GamePanelControlViewModel()
-        {
-            _borders = new ObservableCollection<ObservableCollection<Border>>()
-            {
-                new() { new Border(), new Border(), new Border() },
-                new() { new Border(), new Border(), new Border() },
-                new() { new Border(), new Border(), new Border() }
-            };
-        }
-
-        public void OnCellClick()
-        {
-            Text = "Okay...";
-        }
+        Text = $"This is turn#{_turnCount}!";
     }
 }
