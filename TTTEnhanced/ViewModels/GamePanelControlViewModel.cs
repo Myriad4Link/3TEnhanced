@@ -39,9 +39,34 @@ public class GamePanelControlViewModel : ViewModelBase
 
     public void OnCellClick(int index)
     {
+        if (ChessBoard[index / 3][index % 3] != null) return;
         _turnCount++;
-        if (ChessBoard[index / 3][index % 3] == null) ChessBoard[index / 3][index % 3] = _turnCount % 2 == 0 ? 'O' : 'X';
+        char next = (_turnCount + 1) % 2 == 0 ? 'O' : 'X';
+        ChessBoard[index / 3][index % 3] = _turnCount % 2 == 0 ? 'O' : 'X';
         char? status = StatusCheckModel.CheckStatus(ChessBoard);
-        if (status != null) Text = $@"{status} wins!";
+        if (status != null)
+        {
+            Text = $"{status} wins!";
+            return;
+        }
+
+        if (_turnCount == 9)
+        {
+            Text = "Draw!";
+            return;
+        }
+            
+        Text = $"Next turn: {next}";
+    }
+
+    public void OnRestart()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++) ChessBoard[i][j] = null;
+        }
+
+        Text = "Restarted! Welcome to Tic Tac Toe!";
+        _turnCount = 0;
     }
 }

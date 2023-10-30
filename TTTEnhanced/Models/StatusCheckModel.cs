@@ -53,7 +53,7 @@ public class StatusCheckModel
         }
         
         if (chessboard[0][0] == chessboard[1][1] && chessboard[1][1] == chessboard[2][2]) return chessboard[1][1];
-        if (chessboard[2][0] == chessboard[1][1] && chessboard[1][1] == chessboard[2][0]) return chessboard[1][1];
+        if (chessboard[0][2] == chessboard[1][1] && chessboard[1][1] == chessboard[2][0]) return chessboard[1][1];
         return null;
     }
 }

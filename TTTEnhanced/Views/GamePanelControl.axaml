@@ -90,6 +90,8 @@
                 </Button>
             </UniformGrid>
         </Grid>
-        <Label HorizontalAlignment="Center" Margin="10" Content="{Binding Text}"></Label>
+        <Label HorizontalAlignment="Center" Margin="10" Content="{Binding Text}" />
+        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Command="{Binding OnRestart}"
+                HorizontalContentAlignment="Center" Margin="10" Padding="10" Content="Restart" />
     </Panel>
 </UserControl>
