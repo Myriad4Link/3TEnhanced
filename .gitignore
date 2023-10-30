@@ -44,27 +44,3 @@ Assets/AssetStoreTools*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
-# 自定义其他要忽略的文件类型
-*.exe
-*.dll
-*.pdb
-*.suo
-*.user
-*.aps
-*.pch
-*.vspscc
-*_i.c
-*_p.c
-*.ncb
-*.sdf
-*.opensdf
-*.res
-*.pidb
-ipch/
-*.x86
-*.x64
-*.ilk
-*.meta
-*.unityproj
-*.booproj
