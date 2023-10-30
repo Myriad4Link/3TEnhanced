@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TTTEnhanced")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+205cd742d9fe22768833b2f0bf69749dec6303cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be403daaed1bf0d0476e33f34a1c41f7e1fac323")]
 [assembly: System.Reflection.AssemblyProductAttribute("TTTEnhanced")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TTTEnhanced")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
